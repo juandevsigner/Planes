@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/css/app.css">
+    <title>Planes</title>
+</head>
+<body>
+    <section class="planes contenedor">
+        <div class="swicth">
+            <div class="swicth__container">
+                <a class="swicth__link" href="#">
+                    <img class="swicth__boton" src="build/img/boton.svg" alt="boton">
+                </a>
+            </div>
+            <p class="swicth__texto">Mensual / Anual</p>
+        </div>
+
+        <div class="planes__etiquetas">
+            <a id="empT" class="planes__titulos" href="#emprendedor">
+                <h2 class="planes__titulo">Emprendedor</h2>
+            </a>
+            <a id="pymeT" class="planes__titulos" href="#pyme">
+                <h2 class="planes__titulo">PYME</h2>
+            </a>
+            <a id="proT" class="planes__titulos activoBg-titulo" href="#pro">
+                <h2 class="planes__titulo">PRO</h2>
+            </a>
+        </div>
+
+        <div class="tarjetas">
+
+            <div class="tarjetas__contenedor">
+                <h2 class="tarjetas__subtitulo--basico">- Plan Básico -</h2>
+                <p id="texto" class="tarjetas__texto">(Sin Nómina ni Factura Electrónica)</p>
+                <div id="emprendedor" class="tarjetas__contenido ocultarPlan">
+                    <h3 id="pe" class="tarjetas__precio ocultarPlan">30000</h3>
+                    <h3 id="pes" class="tarjetas__precio--descuento">27000 <del class="tarjetas__precio--del"> 30000</del></h3>
+                    <div class="tarjetas__servicios">
+                        <div class="tarjetas__usuariosInfo">
+                            <p class="tarjetas__usuario">Usuarios</p>
+                            <div class="tarjetas__usuarios"> 
+                                <p>1 Usuario</p>
+                                <p>1 Contador</p>
+                                <p>1 Consultor</p>
+                            </div>
+                        </div>
+                            <p class="tarjetas__servicio">Facturación Electrónica ilimitada</p>
+                            <p class="tarjetas__servicio">Contactos ilimitados</p>
+                            <p class="tarjetas__servicio">Productos ilimitados</p>
+                            <p class="tarjetas__servicio">Informes</p>
+                    </div>
+                    <a class="planes__btn" href="#">Comprar Plan</a>
+                </div>
+
+                <div id="pyme" class="tarjetas__contenido ocultarPlan">
+                    <h3 id="py" class="tarjetas__precio   ocultarPlan">50000</h3>
+                    <h3 id="pys" class="tarjetas__precio--descuento">45000 <del class="tarjetas__precio--del"> 50000</del></h3>
+
+                    <div class="tarjetas__servicios">
+                        <div class="tarjetas__usuariosInfo">
+                            <p class="tarjetas__usuario">Usuarios</p>
+                            <div class="tarjetas__usuarios"> 
+                                <p>3 Usuarios</p>
+                                <p>1 Contador</p>
+                                <p>4 Consultores</p>
+                                <p>4 Meseros</p>
+                            </div>
+                        </div>
+                            <p class="tarjetas__servicio">Contactos ilimitados</p>
+                            <p class="tarjetas__servicio">2.500 Productos</p>
+                            <p class="tarjetas__servicio">Inventario</p>
+                            <p class="tarjetas__servicio">Plan separe</p>
+                            <p class="tarjetas__servicio">Pedidos</p>
+                            <p class="tarjetas__servicio">Remisiones</p>
+                            <p class="tarjetas__servicio">Lista de precios x producto, 
+                                vendedor, cliente y bodega</p>
+                            <p class="tarjetas__servicio">Lotes</p>
+                    </div>
+                    <a class="planes__btn" href="#">Comprar Plan</a>
+                </div>
+
+                <div id="pro" class="tarjetas__contenido">
+                    <h3 id="pr" class="tarjetas__precio   ocultarPlan">75000</h3>
+                    <h3 id="prs" class="tarjetas__precio--descuento">67500 <del class="tarjetas__precio--del"> 75000</del></h3>
+                    <div class="tarjetas__servicios">
+                        <div class="tarjetas__usuariosInfo">
+                            <p class="tarjetas__usuario">Usuarios</p>
+                            <div class="tarjetas__usuarios"> 
+                                <p>5 Usuarios</p>
+                                <p>1 Contador</p>
+                                <p>4 Consultores</p>
+                                <p>Meseros Ilimitados</p>
+                            </div>
+                        </div>
+                            <p class="tarjetas__servicio">Contactos ilimitados</p>
+                            <p class="tarjetas__servicio">Productos ilimitados</p>
+                            <p class="tarjetas__servicio">Inventario</p>
+                            <p class="tarjetas__servicio">Plan separe</p>
+                            <p class="tarjetas__servicio">Pedidos</p>
+                            <p class="tarjetas__servicio">Remisiones</p>
+                            <p class="tarjetas__servicio">Lista de precios x producto, 
+                                vendedor, cliente y bodega</p>
+                            <p class="tarjetas__servicio">Logística (Rutas, Informes, 
+                                Pedidos, Traslados)</p>
+                            <p class="tarjetas__servicio">Producción</p>
+                            <p class="tarjetas__servicio">Lotes</p>
+                    </div>
+                    <a class="planes__btn" href="#">Comprar Plan</a>
+                </div>
+            </div><!--TARJETA FIN-->
+
+            <div class="tarjetas__contenedor">
+                <h2 class="tarjetas__subtitulo">
+                    - Con Nómina Electrónica -
+                </h2>
+                <div class="tarjetas__plan">
+                    <p class="tarjetas__encabezado">1 - 10 Empleados</p>
+                    <a id="ne1" class="tarjetas__boton"  href="#plan-personalizado">Agregar al Plan</a>
+                </div>
+                <div class="tarjetas__plan">
+                    <p class="tarjetas__encabezado" >11 - 50 Empleados</p>
+                    <a id="ne11" class="tarjetas__boton" href="#plan-personalizado">Agregar al Plan</a>
+                </div>
+                <div class="tarjetas__plan">
+                    <p class="tarjetas__encabezado" >51 - 100 Empleados</p>
+                    <a id="ne51" class="tarjetas__boton" href="#plan-personalizado">Agregar al Plan</a>
+                </div>
+                <div class="tarjetas__plan">
+                    <p class="tarjetas__encabezado" >101 - ∞ Empleados</p>
+                    <a id="ne101" class="tarjetas__boton" href="#plan-personalizado">Agregar al Plan</a>
+                </div>
+            </div><!--TARJETA FIN-->
+
+            <div  class="tarjetas__contenedor">
+                <div id="facturaElectronica">
+                    <h2 class="tarjetas__subtitulo">
+                        - Con Factura Electrónica -
+                    </h2>
+                    <div class="tarjetas__plan">
+                        <p class="tarjetas__encabezado" >350 Facturas</p>
+                        <a id="fa1" class="tarjetas__boton" href="#plan-personalizado">Agregar al Plan</a>
+                    </div>
+                    <div class="tarjetas__plan">
+                        <p class="tarjetas__encabezado" >Facturas Ilimitadas</p>
+                        <a  id="fa2" class="tarjetas__boton" href="#plan-personalizado">Agregar al Plan</a>
+                    </div>
+                    <div class="separador"></div>
+                </div>
+                <h2 class="tarjetas__subtitulo--personalizado">Plan Personalizado</h2>
+                <div id="plan-personalizado" class="tarjetas__plan--personalizado">
+                    <div class="tarjetas__totalPago">
+                        <p class="tarjetas__precio--personalizado">Total: $</p>
+                        <p id="valorTotal" class="tarjetas__precio--personalizado">0</p>
+                    </div>
+                    <div>
+                        <a class="tarjetas__boton--personalizado" href="#">Comprar Plan</a>
+                        <a id="btnReset" class="tarjetas__boton--personalizadoDos" href="">Resetear Planes</a>
+                    </div>
+                    
+                </div>
+            </div><!--TARJETA FIN-->
+        </div>
+    </section>
+
+    <script src="js/planes.js"></script>
+</body>
+</html>

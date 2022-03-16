@@ -1,0 +1,240 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.planes{
+    margin-top: 5rem;
+    padding: 5rem ;
+
+    &__etiquetas{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        @include m.desktop{
+            border-bottom: solid 2.5px v.$secundario;
+            flex-direction: row;
+            gap:0;
+        }
+    }
+    &__titulos{
+        padding: 1.5rem 5rem;
+        border-radius: 10rem;
+        border: solid 1px v.$primario;
+        @include m.desktop{
+            border: none;
+            border-radius: 2rem 2rem 0 0;
+            margin-bottom: 0;
+            &:hover{
+                opacity: 85%;
+            }
+        }
+    }
+    &__titulo{
+        font-size: 2.6rem;
+        font-weight: 700;
+    }
+    
+}
+
+
+
+.swicth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    &__container{
+        background-color: v.$grisClaro;
+        padding-top:.4rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        width: 12rem;
+        border-radius: 10rem;
+        box-shadow:inset 2px 2px 5px 2px rgba(0, 0, 0, 0.123);
+    }
+    &__link{
+        display: flex;
+        justify-content: right;
+    }
+    &__texto{
+        font-weight: 400;
+    }
+}
+
+.tarjetas{
+    margin-top: 1rem;
+    padding: 1rem 0;
+
+    p{
+        font-weight: 700;
+        
+        
+    }
+    @include m.tablet{
+    padding: 3rem 0;
+    }
+    @include m.desktop{
+       @include m.grid(3, 1.5rem);
+       justify-content: center;
+    }
+    &__contenedor{
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__subtitulo{
+        margin-bottom: 5rem;
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+    &__subtitulo--basico{
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    &__texto{
+        margin-top: 0;
+        font-weight: 300;
+    }
+    &__contenido{
+        background-color: v.$grisClaro;
+        padding: 1.5rem 3rem;
+        border-radius: 2rem;
+        box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.123);
+        margin-bottom: 2rem;
+        width: 35rem;
+    }
+    &__usuariosInfo{
+        border-bottom: 1px solid rgb(226, 226, 226); 
+    }
+    &__precio{
+        font-weight: 700;
+        font-size: 3rem;
+        &::before{
+            content: '$ ';
+        }
+    }
+    &__precio--descuento{
+        font-weight: 700;
+        font-size: 3rem;
+        &::before{
+            content: '$ ';
+        }
+    }
+    &__precio--del{
+        color: v.$grisOscuro;
+        font-weight: 300;
+    }
+    &__servicio{
+        border-bottom: 1px solid rgb(226, 226, 226);
+        padding-bottom: 1.2rem;
+        &::before {
+            content: '';
+            background-image: url(../img/Icon-check-circle.svg);
+            height: 2rem;
+            width: 2rem;
+            margin-right: 1rem;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+        }
+    }
+    &__usuario{
+        font-weight: 700;
+        font-size: 2.3rem;
+        margin-bottom: 0;
+    }
+    &__usuarios{
+        margin-bottom: 1rem;
+        @include m.grid(2,0);
+        justify-content: center;
+        align-items: center;
+        @include m.tablet{
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+    &__usuarios p{
+        margin: 1rem 0 0 0;
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    &__plan{
+        background-color: v.$grisClaro;
+        padding: 1.5rem 3rem;
+        border-radius: 2rem;
+        box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.123);
+        margin-bottom:2rem;
+        width: 35rem;
+    }
+    &__plan--personalizado{
+        background-color: v.$primario;
+        padding: 4.3rem 3rem;
+        border-radius: 2rem;
+        box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.123);
+        margin-bottom:2rem;
+        width: 35rem;
+        margin-top: 0;
+    }
+    &__subtitulo--personalizado{
+        margin-bottom: 1rem;
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+    &__precio--personalizado{
+        margin-top: 0;
+        color: white;
+        font-size: 2.5rem;
+    }
+    &__boton--personalizado{
+        @include m.boton(v.$secundario, v.$primario); 
+    }
+    &__boton--personalizadoDos{
+        margin-top: 2rem;
+        @include m.boton(rgba(100, 161, 241, 0.493), white);
+       
+    }
+    
+    &__encabezado{
+        margin-top: 0;
+    }
+    &__totalPago{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__texto--personalizado{
+        color: white;
+        font-size: 1.2rem;
+    }
+    &__boton{
+        @include m.boton(v.$grisOscuro, white);
+    }
+}
+
+.separador{
+    border-bottom: 2px solid v.$primario;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+//EVENTOS
+
+.ocultarPlan{
+    display: none;
+}
+.activoBg-titulo{
+    background-color: v.$secundario;
+}
+.activoBtn{
+    @include m.boton(v.$secundario, v.$primario); 
+}
+.swicthActivo{
+    justify-content: start;
+}
